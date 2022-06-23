@@ -4,3 +4,4 @@
 3-listfiles ==> this script displays current directory contents in a long format.
 4-listmorefiles ==> this script displays current directory contents, including hidden files (starting with .).
 6-firstdirectory ==> this script creates a directory named my_first_directory in the /tmp/ directory.
+7-movethatfile ==> this script file moves the file betty from /tmp/ to /tmp/my_first_directory.
