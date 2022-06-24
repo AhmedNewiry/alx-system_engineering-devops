@@ -4,3 +4,4 @@
 3-new_owner => this script writes a script that changes the owner of the file hello to the user betty.
 4-empty ==> this script creates an empty file called hello.
 6-multiple_permissions ==> this script adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
+7-everybody ==> this script adds execution permission to the owner, the group owner and the other users, to the file hello
