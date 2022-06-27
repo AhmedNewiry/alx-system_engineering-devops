@@ -4,3 +4,4 @@
 3-twofiles ==> this script displays the content of /etc/passwd and /etc/hosts
 i
 4-lastlines ==> this script displays the last 10 lines of /etc/passwd
+5-firstlines ===> this script displays the first 10 lines of /etc/passwd
