@@ -30,3 +30,6 @@ Words should be sorted
 16-whatsnext ==> this script Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.
 17-hidethisword ==> this script displays all the lines in the file /etc/passwd that do not contain the pattern “bin”.
 19-AZ ==> this script Replace all characters A and c from input to Z and e respectively
+20-hiago ==> this script Create a script that removes all letters c and C from input.
+21-reverse ==> this script Write a script that reverse its input.
+22-users_and_homes ==> this script Write a script that displays all users and their home directories, sorted by users.
