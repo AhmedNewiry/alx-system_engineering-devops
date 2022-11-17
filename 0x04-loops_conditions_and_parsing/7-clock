@@ -10,6 +10,6 @@ do
 	    echo $min
 	    min=$((min+1))
 	done
-	let "h++"
+	((h++))
 	min="1"
 done
