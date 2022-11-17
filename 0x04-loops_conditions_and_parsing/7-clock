@@ -4,12 +4,12 @@ h="0"
 min="1"
 while [ $h -le 12 ]
 do
-	echo "H: $h"
+	echo "Hour: $h"
 	while [ $min -le 59 ]
 	do
 	    echo $min
 	    min=$((min+1))
 	done
-	h=$((h+1))
+	let = "h++"
 	min="1"
 done
