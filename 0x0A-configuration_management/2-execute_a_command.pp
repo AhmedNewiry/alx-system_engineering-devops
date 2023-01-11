@@ -1,5 +1,6 @@
 #executes a command
-exec { 'pkill':
-	command => '/usr/bin/pkill killmenow'
 
+exec { 'pkill':
+  command  => 'pkill killmenow',
+  provider => 'shell',
 }
