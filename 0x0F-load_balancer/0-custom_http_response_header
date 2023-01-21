@@ -3,8 +3,8 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo service nginx start
-sudo echo "Hello World!" > /var/www/html/index.html
-sudo echo "Ceci n'est pas une page" > /var/www/html/not_found.html
+echo "Hello World!" | sudo tee /var/www/html/index.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/not_found.html
 server_block=\
 "server {
         listen 80 default_server;
