@@ -42,7 +42,6 @@ server_block=\
 
         error_page 404 /not_found.html;
         location /not_found.html {
-                root /var/www/html;
                 internal;
         }
         location /redirect_me {
@@ -53,6 +52,6 @@ server_block=\
 
 }
 "
-echo "$server_block" > /etc/nginx/sites-available/default
+echo "$server_block" > /etc/nginx/sites-enabled/default
 sudo service nginx restart
 sudo service nginx reload
