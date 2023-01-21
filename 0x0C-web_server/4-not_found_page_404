@@ -53,6 +53,6 @@ server_block=\
 
 }
 "
-echo "$server_block" > /etc/nginx/sites-enabled/default
+echo "$server_block" > /etc/nginx/sites-available/default
 sudo service nginx restart
 sudo service nginx reload
