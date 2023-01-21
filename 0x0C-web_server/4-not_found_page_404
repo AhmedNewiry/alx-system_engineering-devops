@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo service nginx start
-sudo echo "Hello World!" > /var/www/nginx/index.html
+sudo echo "Hello World!" > /var/www/html/index.html
 sudo echo "Ceci n'est pas une page" > /var/www/html/404_not_found.html
 server_block =\
 "server {                                                                                                                                                                           
@@ -44,6 +44,7 @@ server_block =\
         
         error_page 404 /404_not_found.html
         location /404_not_found.html {
+		root /var/www/html;
                 internal;
         }
                                                                                                                                                                                   
