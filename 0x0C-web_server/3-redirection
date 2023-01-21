@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# a Bash script that configures a new Ubuntu machine to install NGINX web server
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo service nginx start
+sed -i '52 a\   location /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}' /etc/nginx/sites-enabled/default
+sudo nginx -s reload
