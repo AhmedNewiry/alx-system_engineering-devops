@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#a Bash script that will display information about subdomains.
+
+dns_lookup()
+{
+    record_type=$(dig $2.$1 | awk '/ANSWER SECTION:/{getline; print $4}')
+    ip=$(dig $2.$1 | awk '/ANSWER SECTION:/{getline; print $5}')
+    echo "The subdomain $2 is a $record_type record and points to $ip"
+    echo "$ip"
+}
+
+if [ $# -eq 1 ]
+then
+    for i in "www" "lb-01" "web-01" "web-02"
+    do
+        dns_lookup $1 "$i"
+    done
+else
+    dns_lookup $1 $2
+fi
