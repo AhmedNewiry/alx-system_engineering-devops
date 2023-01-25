@@ -6,7 +6,6 @@ dns_lookup()
     record_type=$(dig "$2"."$1" | awk '/ANSWER SECTION:/{getline; print $4}')
     ip=$(dig "$2"."$1" | awk '/ANSWER SECTION:/{getline; print $5}')
     echo "The subdomain $2 is a $record_type record and points to $ip"
-    echo "$ip"
 }
 
 if [ $# -eq 1 ]
