@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Run nginx as nginx
+sudo pkill -f apache2
+sudo service nginx stop
+sudo sed -i '1i user nginx;' /etc/nginx/nginx.conf
+sudo sed -i "s/80/8080/" /etc/nginx/sites-enabled/default
+sudo service nginx start
