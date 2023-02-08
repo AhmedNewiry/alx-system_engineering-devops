@@ -19,7 +19,7 @@ if __name__ == '__main__':
     for todo in todos:
         if todo['completed'] is True:
             completed_todos.append(todo)
-    print("Employee {} is done with tasks({}/{}):"
-            .format(user_info['name'], len(completed_todos), len(todos)))
+    print("Employee {} is done with tasks({}/{}):".format(user_info['name'],
+          len(completed_todos), len(todos)))
     for todo in completed_todos:
         print("\t {}".format(todo['title'])
