@@ -16,7 +16,7 @@ if __name__ == '__main__':
     user_info = user_info.json()
     todos = requests.get('{}/todos?userId={}'.format(api, emp_id))
     todos = todos.json()
-    with open(filename, mode="w") as cvs_f:
+    with open(file_name, mode="w") as cvs_f:
         writer = csv.writer(cvs_f, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_ALL)
     for todo in todos:
