@@ -19,7 +19,7 @@ if __name__ == '__main__':
     todos_copy = []
     for todo in todos:
         todos_copy.append(todo)
-    emp_todos = {}
+    emp_todos = []
     emp_todos[emp_id] = todos_copy
     with open(file_name, mode='w') as json_file:
         json.dump(emp_todos, json_file)
