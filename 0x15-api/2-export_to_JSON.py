@@ -23,6 +23,6 @@ if __name__ == '__main__':
                 'username': user_info.get('name')
                 }
         todos_copy.append(task)
-    emp_todos[emp_id] = todos_copy
+    emp_todos[str(emp_id)] = todos_copy
     with open(file_name, mode='w') as json_file:
         json.dump(emp_todos, json_file)
