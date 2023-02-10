@@ -4,9 +4,9 @@
 """
 
 
+import json
 import requests
 import sys
-import json
 
 api = 'https://jsonplaceholder.typicode.com'
 if __name__ == '__main__':
