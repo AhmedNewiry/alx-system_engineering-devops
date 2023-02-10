@@ -13,7 +13,7 @@ if __name__ == '__main__':
     file_name = 'todo_all_employees.json'
     users = requests.get('{}/users/'.format(api))
     users = users.json()
-    emps_todos = {}
+    emp_todos = {}
     for usr in users:
         emp_id = usr['id']
         todos = requests.get('{}/todos?userId={}'.format(api, emp_id))
@@ -21,7 +21,6 @@ if __name__ == '__main__':
         todos_copy = []
         for todo in todos:
             todos_copy.append(todo)
-        emp_todos = {}
         emp_todos[emp_id] = todos_copy
     with open(file_name, mode='w') as json_file:
         json.dump(emp_todos, json_file)
