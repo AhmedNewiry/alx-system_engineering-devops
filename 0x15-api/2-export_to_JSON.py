@@ -11,7 +11,7 @@ import json
 api = 'https://jsonplaceholder.typicode.com'
 if __name__ == '__main__':
     emp_id = sys.argv[1]
-    file_name = f'{emp_id}.json'
+    file_name = '{}.json'.format(emp_id)
     user_info = requests.get('{}/users/{}'.format(api, emp_id))
     user_info = user_info.json()
     todos = requests.get('{}/todos?userId={}'.format(api, emp_id))
