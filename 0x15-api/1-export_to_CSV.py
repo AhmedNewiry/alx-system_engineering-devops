@@ -3,10 +3,9 @@
    returns information about his/her TODO list progress
 """
 
-
+import csv
 import requests
 import sys
-import csv
 
 api = 'https://jsonplaceholder.typicode.com'
 if __name__ == '__main__':
