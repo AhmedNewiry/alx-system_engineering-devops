@@ -20,7 +20,11 @@ if __name__ == '__main__':
         todos = todos.json()
         todos_copy = []
         for todo in todos:
-            todos_copy.append(todo)
+            task = {'username':usr['name'],
+                    'task': todo['title'],
+                    'completed':todo['completed']
+                    }
+            todos_copy.append(task)
         emp_todos[emp_id] = todos_copy
     with open(file_name, mode='w') as json_file:
         json.dump(emp_todos, json_file)
