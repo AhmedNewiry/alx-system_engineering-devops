@@ -1,4 +1,5 @@
 #practice puppet by making changes to ssh_config file
+include stdlib
 file_line { 'IdentifyFile property':
   ensure  => 'present',
   path    => '/etc/ssh/ssh_config',
