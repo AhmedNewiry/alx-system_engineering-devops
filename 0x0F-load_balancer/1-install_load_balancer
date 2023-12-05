@@ -14,6 +14,7 @@ conf=\
         default_backend web-backend
 backend web-backend
         balance roundrobin
+	no option http-use-htx
         server 67011-web-01 100.25.194.46:80 check
         server 67011-web-02 100.25.194.197:80 check"
 
