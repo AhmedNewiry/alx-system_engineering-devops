@@ -20,7 +20,7 @@ if __name__ == '__main__':
     for todo in todos:
         task = {'task': todo.get('title'),
                 'completed': todo.get('completed'),
-                'username': user_info.get('name')
+                'username': user_info.get('username')
                 }
         todos_copy.append(task)
     emp_todos[str(emp_id)] = todos_copy
