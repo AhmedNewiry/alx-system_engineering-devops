@@ -1,5 +1,5 @@
 exec { 'increase worker limit':
-  command     => 'sed -i "s/4/4000/" /etc/default/nginx && systemctl restart nginx',
+  command     => 'sed -i "s/4/15000/" /etc/default/nginx && systemctl restart nginx',
   path        => ['/bin', '/usr/bin'],
   refreshonly => true,
   logoutput   => true,
