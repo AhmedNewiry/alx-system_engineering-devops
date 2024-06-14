@@ -28,15 +28,15 @@ server {
                 proxy_redirect off;
         }
 
-   	 location /2-hbnb {
-	   	 proxy_pass http://localhost:5003;
-	    	 proxy_set_header Host $host;
-	    	 proxy_set_header X-Real-IP $remote_addr;
-    	}
+         location /2-hbnb/ {
+                proxy_pass http://localhost:5003;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+        }
 
-    	location /static/ {
-	    	alias ~/AirBnB_clone_v4/web_dynamic/static/;
-    	}
+        location /static/ {
+                alias /var/www/html/web_dynamic/static/;
+        }
 
         error_page 404 /not_found.html;
         location /not_found.html {
